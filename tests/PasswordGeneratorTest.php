@@ -44,8 +44,6 @@ it('should return strong password with at least 2 upper case letters, 1 lower ca
     expect(numberOfSymbols($password))->toBeGreaterThanOrEqual(1);
 });
 
-
-
 function numberOfUpperCaseCharacters(string $password)
 {
     return collect(str_split($password))

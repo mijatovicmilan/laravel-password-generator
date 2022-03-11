@@ -25,7 +25,7 @@ return [
     "default_password_length" => 6,
 
     // If password strength is not passed we will use this strength instead
-    "default_password_strength" => 3,
+    "default_password_strength" => 2,
 ];
 ```
 
