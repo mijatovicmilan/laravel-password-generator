@@ -4,7 +4,6 @@ namespace MijatovicMilan\LaravelPasswordGenerator;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use MijatovicMilan\LaravelPasswordGenerator\Commands\LaravelPasswordGeneratorCommand;
 
 class LaravelPasswordGeneratorServiceProvider extends PackageServiceProvider
 {

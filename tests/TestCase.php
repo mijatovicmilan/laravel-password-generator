@@ -3,8 +3,8 @@
 namespace MijatovicMilan\LaravelPasswordGenerator\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Orchestra\Testbench\TestCase as Orchestra;
 use MijatovicMilan\LaravelPasswordGenerator\LaravelPasswordGeneratorServiceProvider;
+use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
 {

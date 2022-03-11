@@ -49,7 +49,7 @@ it('should return strong password with at least 2 upper case letters, 1 lower ca
 function numberOfUpperCaseCharacters(string $password)
 {
     return collect(str_split($password))
-        ->map(function($character) {
+        ->map(function ($character) {
             return ctype_upper($character) ? $character : null;
         })
         ->filter()
@@ -59,27 +59,29 @@ function numberOfUpperCaseCharacters(string $password)
 function numberOfLowerCaseCharacters(string $password)
 {
     return collect(str_split($password))
-        ->map(function($character) {
+        ->map(function ($character) {
             return ctype_lower($character) ? $character : null;
         })
         ->filter()
         ->count();
 }
 
-function numberOfDigitsBetweenTwoAndFive(string $password) {
+function numberOfDigitsBetweenTwoAndFive(string $password)
+{
     return collect(str_split($password))
-        ->map(function($character) {
+        ->map(function ($character) {
             return is_numeric($character) && $character >= 2 && $character <= 5 ? $character : null;
         })
         ->filter()
         ->count();
 }
 
-function numberOfSymbols(string $password) {
+function numberOfSymbols(string $password)
+{
     $symbols = '!#$%&(){}[]';
 
     return collect(str_split($password))
-        ->map(function($character) use ($symbols) {
+        ->map(function ($character) use ($symbols) {
             return in_array($character, str_split($symbols)) ? $character : null;
         })
         ->filter()
