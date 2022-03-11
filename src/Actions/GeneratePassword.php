@@ -23,7 +23,7 @@ class GeneratePassword
             ? $strength :
             config('password-generator.default_password_strength');
 
-        $setsCombined = collect($sets)->flatMap(function($value, $key) {
+        $setsCombined = collect($sets)->flatMap(function ($value, $key) {
             return $value;
         })
         ->implode('');
@@ -39,7 +39,7 @@ class GeneratePassword
         $length -= 1;
 
         // If password strength is 2 or 3 we will add 1 number between 2 and 5
-        if(in_array($strength, [2, 3])) {
+        if (in_array($strength, [2, 3])) {
             // Get only digits between 2 and 5
             $digitsBetweenTwoAndFive = Str::substr($sets['d'][0], 1, 4);
             // Add 1 random digit between 2 and 5
@@ -49,7 +49,7 @@ class GeneratePassword
         }
 
         // If password strength is 3 we will add 1 symbol
-        if($strength === 3) {
+        if ($strength === 3) {
             // Add 1 random symbol
             $password .= Str::substr(str_shuffle($sets['s'][0]), 0, 1);
             // Remove 1 from length
